@@ -55,7 +55,11 @@
 
 /* mouse grab icon */
 .grabbing { 
+<<<<<<< HEAD
     cursor:url(../img/grabbing.png) 8 8, move;
+=======
+    cursor:url(grabbing.png) 8 8, move;
+>>>>>>> b556893863e761f3ddb043a285a6af145b2ab616
 }
 
 /* fix */

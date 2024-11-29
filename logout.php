@@ -1,5 +1,6 @@
 <?php
 session_start();
+<<<<<<< HEAD
 session_destroy();
 ?>
 <!DOCTYPE html>
@@ -30,3 +31,16 @@ session_destroy();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   </body>
 </html>
+=======
+include("includes/config.php");
+$_SESSION['login']=="";
+date_default_timezone_set('Asia/Kolkata');
+$ldate=date( 'd-m-Y h:i:s A', time () );
+mysqli_query($con,"UPDATE userlog  SET logout = '$ldate' WHERE userEmail = '".$_SESSION['login']."' ORDER BY id DESC LIMIT 1");
+session_unset();
+$_SESSION['errmsg']="You have successfully logout";
+?>
+<script language="javascript">
+document.location="index.php";
+</script>
+>>>>>>> b556893863e761f3ddb043a285a6af145b2ab616
